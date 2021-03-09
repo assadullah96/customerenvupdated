@@ -131,8 +131,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments','emptyDataFactory')]",
-                "[resourceId('Microsoft.Resources/deployments','sqlServer')]"
+                "[resourceId('Microsoft.Resources/deployments','emptyDataFactory')]"
             ],
             "properties": {
                 "mode": "Incremental",
