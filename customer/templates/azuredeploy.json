@@ -94,10 +94,10 @@
         "factoryName": "[concat(parameters('factoryName'), uniquestring(resourceGroup().id))]",
         "keyVaultUniqueName": "[concat(parameters('keyVaultName'), uniqueString(resourceGroup().id))]",
         "webHookUri": "",
-        "keyVaultTemplateUri": "",
-        "keyVaultPermissionsUpdateTemplateUri": "",
-        "linkedTemplateUri": "",
-        "emptyDataFactoryTemplateUri": ""
+        "keyVaultTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/keyVault/azuredeploy.json",
+        "keyVaultPermissionsUpdateTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/keyVaultPermissionsUpdate/azuredeploy.json",
+        "linkedTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/linkedTemplate/azuredeploy.json",
+        "emptyDataFactoryTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/dataFactory/azuredeploy.json"
     },
     "resources": [
         {
