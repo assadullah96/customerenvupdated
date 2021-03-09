@@ -91,7 +91,7 @@
 },
 
     "variables": {
-        "factoryName": "[concat(parameters('factoryName'), uniquestring(resourceGroup().id))]",
+        "dataFactoryUniqueName": "[concat(parameters('factoryName'), uniquestring(resourceGroup().id))]",
         "keyVaultUniqueName": "[concat(parameters('keyVaultName'), uniqueString(resourceGroup().id))]",
         "webHookUri": "",
         "keyVaultTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/keyVault/azuredeploy.json",
@@ -149,7 +149,7 @@
                         "value": "[parameters('keyVaultName')]"
                     },
                     "factoryName": {
-                        "value": "[variables('factoryName')]"
+                        "value": "[variables('dataFactoryUniqueName')]"
                     },
                     "yourObjectId": {
                         "value": "[parameters('yourObjectId')]"
@@ -171,7 +171,7 @@
                 },
                 "parameters": {
                     "factoryName": {
-                        "value": "[variables('factoryName')]"
+                        "value": "[variables('dataFactoryUniqueName')]"
                     },
                     "location": {
                         "value": "[parameters('location')]"
@@ -223,7 +223,7 @@
                         "value": "[parameters('location')]"
                     },
                     "factoryName": {
-                        "value": "[variables('factoryName')]"
+                        "value": "[variables('dataFactoryUniqueName')]"
                     }
                 }
             }
