@@ -18,7 +18,7 @@
             }
          },
 
-          "existingOrNewStorage": {
+        "existingOrNewStorage": {
             "allowedValues": [ "new", "existing" ],
             "type": "string",
             "metadata": {
@@ -46,14 +46,6 @@
             "defaultValue": "keyvault",
             "metadata": {
                 "description": "Specifies the name of the key vault."
-            }
-        },
-        
-        "resourceGroupNameForKeyVault": {
-            "type": "string",
-            "defaultValue":"[resourceGroup().name]",
-            "metadata": {
-                "description": "Specifies the resource group name to get the application id in keyvault."
             }
         },
 
@@ -171,16 +163,10 @@
                     "storageAccountName": {
                         "value": "[variables('storageAccountUniqueName')]"
                     },
-                    "useExistingOrNewKeyVault":{
-                         "value": "[parameters('useExistingOrNewKeyVault')]"
-                    },
                     "keyVaultName": {
                         "value": "[parameters('keyVaultName')]"
                     },
     
-                    "SASBlobUriValue": {
-                        "value": "[parameters('SASBlobUriValue')]"
-                    },
                     "actionGroupsName": {
                         "value": "[parameters('actionGroupsName')]"
                     },
@@ -216,15 +202,8 @@
                     "storageAccountName": {
                         "value": "[variables('storageAccountUniqueName')]"
                     },
-                    "useExistingOrNewKeyVault":{
-                         "value": "[parameters('useExistingOrNewKeyVault')]"
-                    },
                     "keyVaultName": {
                         "value": "[parameters('keyVaultName')]"
-                    },
-
-                    "SASBlobUriValue": {
-                        "value": "[parameters('SASBlobUriValue')]"
                     },
                     "actionGroupsName": {
                         "value": "[parameters('actionGroupsName')]"
