@@ -531,7 +531,6 @@
                 "lastPublishTime": "2021-02-24T14:27:50Z"
             },
             "dependsOn": [
-                "[parameters('factoryName')]",
                 "[concat(variables('factoryId'), '/datasets/public_env_dataset')]",
                 "[concat(variables('factoryId'), '/datasets/customer_env_dataseet')]",
                 "[concat(variables('factoryId'), '/datasets/csv_source_dataset')]",
@@ -568,7 +567,6 @@
                 }
             },
             "dependsOn": [
-                "[parameters('factoryName')]",
                 "[concat(variables('factoryId'), '/pipelines/USAFactsKnownCases_publicToCustomerEnvironmentCopyData')]"
             ]
         },
@@ -853,7 +851,6 @@
                 }
             },
             "dependsOn": [
-                "[parameters('factoryName')]"
             ]
         },
         {
@@ -891,7 +888,6 @@
                 }
             },
             "dependsOn": [
-                "[parameters('factoryName')]"
             ]
         },
 
@@ -954,7 +950,6 @@
                 "azureFunctionReceivers": []
             },
             "dependsOn": [
-                "[parameters('factoryName')]",
                 "[concat(variables('factoryId'), '/datasets/public_env_dataset')]",
                 "[concat(variables('factoryId'), '/datasets/customer_env_dataseet')]",
                 "[concat(variables('factoryId'), '/datasets/csv_source_dataset')]",
