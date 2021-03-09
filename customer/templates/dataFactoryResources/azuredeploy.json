@@ -872,7 +872,6 @@
                 }
             },
             "dependsOn": [
-                "[parameters('factoryName')]",
                 "[concat(variables('factoryId'), '/linkedServices/AzureKeyVaultForSASURI')]"
             ]
         },
