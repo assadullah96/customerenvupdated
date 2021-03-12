@@ -160,8 +160,8 @@
                                 "type": "DatasetReference",
                                 "parameters": {
                                     "container": "customer",
-                                    "directory": "curated/USAFactsKnownCases/latest",
-                                    "file": "USAFactsKnownCases.csv"
+                                    "directory": "curated/USAFacts_data/latest",
+                                    "file": "USAFacts_curated_data.csv"
                                 }
                             },
                             "fieldList": [
@@ -203,7 +203,7 @@
                                 "referenceName": "previous_dataset",
                                 "type": "DatasetReference",
                                 "parameters": {
-                                    "container": "schemadetection",
+                                    "container": "schemas-for-comparison",
                                     "fileName": "previous_dataset.csv",
                                     "directory": "previous_dataset"
                                 }
@@ -433,7 +433,7 @@
                                 "referenceName": "previous_dataset",
                                 "type": "DatasetReference",
                                 "parameters": {
-                                    "container": "schemadetection",
+                                    "container": "schemas-for-comparison",
                                     "fileName": "previous_dataset.csv",
                                     "directory": "previous_dataset"
                                 }
@@ -444,7 +444,7 @@
                                 "referenceName": "get_previous_dataset_copy",
                                 "type": "DatasetReference",
                                 "parameters": {
-                                    "container": "schemadetection",
+                                    "container": "schemas-for-comparison",
                                     "fileName": "get_previous_dataset_copy.csv",
                                     "directory": "get_previous_dataset_copy"
                                 }
@@ -509,8 +509,8 @@
                                 "type": "DatasetReference",
                                 "parameters": {
                                     "container": "customer",
-                                    "directory": "curated/USAFactsKnownCases/latest",
-                                    "file": "USAFactsKnownCases.csv"
+                                    "directory": "curated/USAFacts_data/latest",
+                                    "file": "USAFacts_curated_data.csv"
                                 }
                             }
                         ],
@@ -519,7 +519,7 @@
                                 "referenceName": "previous_dataset",
                                 "type": "DatasetReference",
                                 "parameters": {
-                                    "container": "schemadetection",
+                                    "container": "schemas-for-comparison",
                                     "fileName": "previous_dataset.csv",
                                     "directory": "previous_dataset"
                                 }
@@ -663,7 +663,7 @@
                 "parameters": {
                     "container": {
                         "type": "string",
-                        "defaultValue": "schemadetection"
+                        "defaultValue": "schemas-for-comparison"
                     },
                     "fileName": {
                         "type": "string",
@@ -722,11 +722,11 @@
                     },
                     "directory": {
                         "type": "string",
-                        "defaultValue": "curated/USAFactsKnownCases/latest"
+                        "defaultValue": "curated/USAFacts_data/latest"
                     },
                     "file": {
                         "type": "string",
-                        "defaultValue": "USAFactsKnownCases.csv"
+                        "defaultValue": "USAFacts_curated_data.csv"
                     }
                 },
                 "folder": {
@@ -798,7 +798,7 @@
                 "parameters": {
                     "container": {
                         "type": "string",
-                        "defaultValue": "schemadetection"
+                        "defaultValue": "schemas-for-comparison"
                     },
                     "fileName": {
                         "type": "string",
