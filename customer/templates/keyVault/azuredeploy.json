@@ -8,16 +8,6 @@
           "description": "Location of your resources. Default location is eastUS"
           }
         },
-  
-  "useExistingOrNewKeyVault": {
-        "type": "string",
-        "allowedValues": [ "new", "existing" ],
-        "metadata": {
-            "description": "Please specify if you want to use existing key vault or you want to create new one?."
-        },
-        "defaultValue": "new"
-        
-        },
 
     "keyVaultName": {
         "type": "string",
@@ -42,7 +32,6 @@
 
   "resources": [
     {
-        "condition": "[equals(parameters('useExistingOrNewKeyVault'),'new')]", 
         "type": "Microsoft.KeyVault/vaults",
         "apiVersion": "2019-09-01",
         "name": "[parameters('keyVaultName')]",
@@ -66,7 +55,6 @@
         }
       },
       {
-        "condition": "[equals(parameters('useExistingOrNewKeyVault'),'new')]", 
         "type": "Microsoft.KeyVault/vaults/secrets",
         "apiVersion": "2019-09-01",
         "name": "[concat(parameters('keyVaultName'), '/', variables('secretName'))]",
