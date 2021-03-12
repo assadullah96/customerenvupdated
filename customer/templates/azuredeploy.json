@@ -90,7 +90,7 @@
 
     "variables": {
         "dataFactoryUniqueName": "[concat(parameters('factoryName'), uniquestring(resourceGroup().id))]",
-        "keyVaultUniqueName": "[concat(parameters('keyVaultName'), uniqueString(resourceGroup().id))]",
+        "keyVaultName": "[concat(parameters('keyVaultName'), uniquestring(resourceGroup().id))]",
         "webHookUri": "",
         "keyVaultTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/keyVault/azuredeploy.json",
         "keyVaultPermissionsUpdateTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/keyVaultPermissionsUpdate/azuredeploy.json",
@@ -112,7 +112,7 @@
                         "value": "[parameters('location')]"
                     },
                     "keyVaultName": {
-                        "value": "[parameters('keyVaultName')]"
+                        "value": "[variables('keyVaultName')]"
                     },
                     "SASBlobUriValue": {
                         "value": "[parameters('SASBlobUriValue')]"
@@ -138,7 +138,7 @@
                         "value": "[parameters('location')]"
                     },
                     "keyVaultName": {
-                        "value": "[parameters('keyVaultName')]"
+                        "value": "[variables('keyVaultName')]"
                     },
                     "factoryName": {
                         "value": "[variables('dataFactoryUniqueName')]"
@@ -175,7 +175,7 @@
                         "value": "[parameters('storageAccountName')]"
                     },
                     "keyVaultName": {
-                        "value": "[parameters('keyVaultName')]"
+                        "value": "[variables('keyVaultName')]"
                     },
                     "SASBlobUriValue": {
                         "value": "[parameters('SASBlobUriValue')]"
