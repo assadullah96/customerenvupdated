@@ -175,7 +175,7 @@
                         "value": "[parameters('storageAccountName')]"
                     },
                     "keyVaultName": {
-                        "value": "[variables('keyVaultName')]"
+                        "value": "[parameters('keyVaultName')]"
                     },
                     "SASBlobUriValue": {
                         "value": "[parameters('SASBlobUriValue')]"
