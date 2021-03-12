@@ -42,8 +42,11 @@
             "metadata": {
               "description": "Specifies the name of the key vault."
             }
-          }
-    
+          },
+    "StartTriggerTime": {
+            "type": "string"
+            
+        }
   },
    "variables": {
         "factoryId": "[resourceId('Microsoft.DataFactory/factories/', parameters('factoryName'))]",
@@ -555,9 +558,9 @@
                 },
                 "type": "TumblingWindowTrigger",
                 "typeProperties": {
-                    "frequency": "Minute",
-                    "interval": 5,
-                    "startTime": "2021-02-25T07:15:00Z",
+                    "frequency": "Hour",
+                    "interval": 24,
+                    "startTime": "[parameters('StartTriggerTime')]",
                     "delay": "00:00:00",
                     "maxConcurrency": 50,
                     "retryPolicy": {
