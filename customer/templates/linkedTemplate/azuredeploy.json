@@ -86,7 +86,7 @@
     "variables": {
         "storageAccountUniqueName": "[toLower(concat(parameters('storageAccountName'), uniqueString(resourceGroup().id)))]",
         "dataFactoryUniqueName": "[concat(parameters('factoryName'), uniqueString(resourceGroup().id))]",
-        "keyVaultUniqueName": "[concat(parameters('keyVaultName'), uniqueString(resourceGroup().id))]",
+        "keyVaultName": "[concat(parameters('keyVaultName'), uniqueString(resourceGroup().id))]",
         "webHookUri": "",
         "storageTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/storageAccount/azuredeploy.json",
         "logicAppTemplateUri": "https://raw.githubusercontent.com/assadullah96/customerenvupdated/main/customer/templates/logicApp/azuredeploy.json",
@@ -162,7 +162,7 @@
                         "value": "[variables('storageAccountUniqueName')]"
                     },
                     "keyVaultName": {
-                        "value": "[parameters('keyVaultName')]"
+                        "value": "[variables('keyVaultName')]"
                     },
     
                     "actionGroupsName": {
@@ -204,7 +204,7 @@
                         "value": "[variables('storageAccountUniqueName')]"
                     },
                     "keyVaultName": {
-                        "value": "[parameters('keyVaultName')]"
+                        "value": "[variables('keyVaultName')]"
                     },
                     "actionGroupsName": {
                         "value": "[parameters('actionGroupsName')]"
