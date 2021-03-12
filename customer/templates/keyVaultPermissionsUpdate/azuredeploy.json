@@ -25,16 +25,7 @@
           "metadata": {
               "description": "Kindly give your Object Id so that full permissions to key vault can be assigned to you"
             }
-      },
-       "useExistingOrNewKeyVault": {
-          "type": "string",
-          "allowedValues": [ "new", "existing" ],
-          "metadata": {
-            "description": "Please specify if you want to use existing key vault or you want to create new one?."
-        },
-        "defaultValue": "new"
-        
-        }
+      }
     },
 
     "variables": {
@@ -44,7 +35,6 @@
 
     "resources": [
       {
-        "condition": "[equals(parameters('useExistingOrNewKeyVault'),'new')]", 
         "type": "Microsoft.KeyVault/vaults",
         "apiVersion": "2019-09-01",
         "name": "[parameters('keyVaultName')]",
