@@ -87,7 +87,12 @@
           "metadata": {
               "description": "Kindly give your Object Id so that full permissions to key vault can be assigned to you"
             }
-      }
+      },
+      "StartTriggerTime": {
+            "type": "string",
+            "defaultValue": "[utcNow('u')]"
+            
+        }
 },
 
     "variables": {
@@ -202,6 +207,9 @@
                     },
                     "emailForAlerts": {
                         "value": "[parameters('emailForAlerts')]"
+                    },
+                    "StartTriggerTime": {
+                        "value": "[parameters('StartTriggerTime')]"
                     }
                 }
             }
